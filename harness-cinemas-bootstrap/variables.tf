@@ -7,7 +7,7 @@ variable "harness_platform_api_key" {
 
 locals {
   harness_platform_projects = tomap({
-    "cinemas-org" = var.cristiab_lab_org_projects
+    "cinemas-org" = var.cinemas_org
   })
 
   harness_platform_connectors = merge(
