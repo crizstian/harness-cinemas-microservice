@@ -16,7 +16,7 @@ variable "harness_connectors_crizstian_artifactory_token" {
 
 locals {
   harness_platform_projects = tomap({
-    "cinemas-org" = var.cinemas_org
+    "cristian-cinemas-org" = var.cinemas_org
   })
 
   harness_platform_connectors = merge(
