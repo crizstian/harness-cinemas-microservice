@@ -15,7 +15,8 @@ module "bootstrap_cinemas_delegates" {
 
 module "bootstrap_cinemas_connectors" {
   depends_on = [
-    module.bootstrap_cinemas_org
+    module.bootstrap_cinemas_org,
+    module.bootstrap_cinemas_delegates
   ]
   source                      = "git::https://github.com/crizstian/harness-terraform-modules.git//harness-connectors?ref=main"
   harness_platform_connectors = local.harness_platform_connectors

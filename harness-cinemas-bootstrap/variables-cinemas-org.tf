@@ -25,7 +25,7 @@ locals {
         tags                   = ["gcp-environment"]
         clusterPermissionType  = "CLUSTER_ADMIN"
         customClusterNamespace = "harness-delegate-ng"
-        org_id                 = module.bootstrap_harness.organization["cristiab-lab-org"].org_id
+        org_id                 = module.bootstrap_cinemas_org.organization["cristiab-lab-org"].org_id
       }
     }
   }
@@ -38,8 +38,8 @@ locals {
         connection_type = "Account"
         url             = "https://github.com/Crizstian"
         validation_repo = "harness-as-code"
-        org_id          = module.bootstrap_harness.project["Movie Service"].org_id
-        project_id      = module.bootstrap_harness.project["Movie Service"].identifier
+        org_id          = module.bootstrap_cinemas_org.project["Movie Service"].org_id
+        project_id      = module.bootstrap_cinemas_org.project["Movie Service"].identifier
         credentials = {
           http = {
             username  = "crizstian"
@@ -53,8 +53,8 @@ locals {
         connection_type = "Account"
         url             = "https://github.com/Crizstian"
         validation_repo = "harness-as-code"
-        org_id          = module.bootstrap_harness.project["Payment Service"].org_id
-        project_id      = module.bootstrap_harness.project["Payment Service"].identifier
+        org_id          = module.bootstrap_cinemas_org.project["Payment Service"].org_id
+        project_id      = module.bootstrap_cinemas_org.project["Payment Service"].identifier
         credentials = {
           http = {
             username  = "crizstian"
