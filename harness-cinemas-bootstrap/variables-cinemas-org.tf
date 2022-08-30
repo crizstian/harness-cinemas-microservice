@@ -53,8 +53,8 @@ locals {
         connection_type = "Account"
         url             = "https://github.com/Crizstian"
         validation_repo = "harness-as-code"
-        org_id          = module.bootstrap_cinemas_org.project["Payment Service"].org_id
-        project_id      = module.bootstrap_cinemas_org.project["Payment Service"].identifier
+        org_id          = module.bootstrap_cinemas_org.project["Payments Service"].org_id
+        project_id      = module.bootstrap_cinemas_org.project["Payments Service"].identifier
         credentials = {
           http = {
             username  = "crizstian"
