@@ -25,7 +25,7 @@ locals {
         tags                   = ["gcp-environment"]
         clusterPermissionType  = "CLUSTER_ADMIN"
         customClusterNamespace = "harness-delegate-ng"
-        org_id                 = module.bootstrap_cinemas_org.organization["cristiab-lab-org"].org_id
+        org_id                 = module.bootstrap_cinemas_org.organization["cinemas-org"].org_id
       }
     }
   }
