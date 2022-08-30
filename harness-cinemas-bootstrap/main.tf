@@ -13,18 +13,18 @@ module "bootstrap_cinemas_delegates" {
   harness_platform_api_key   = var.harness_platform_api_key
 }
 
-# module "bootstrap_cinemas_connectors" {
-#   depends_on = [
-#     module.bootstrap_cinemas_org,
-#     module.bootstrap_cinemas_delegates
-#   ]
-#   source                      = "git::https://github.com/crizstian/harness-terraform-modules.git//harness-connectors?ref=main"
-#   harness_platform_connectors = local.harness_platform_connectors
+module "bootstrap_cinemas_connectors" {
+  depends_on = [
+    module.bootstrap_cinemas_org,
+    module.bootstrap_cinemas_delegates
+  ]
+  source                      = "git::https://github.com/crizstian/harness-terraform-modules.git//harness-connectors?ref=main"
+  harness_platform_connectors = local.harness_platform_connectors
 
-#   providers = {
-#     harness = harness.provisioner
-#   }
-# }
+  providers = {
+    harness = harness.provisioner
+  }
+}
 
 output "details" {
   value = {
